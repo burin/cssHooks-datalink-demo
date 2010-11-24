@@ -20,11 +20,11 @@ jQuery( function( $ ){
 	$( '#borderRadius' ).link( box_css, {
 		borderRadius: {
 			convert: function( value, source, target ) {
-				$( '#box' ).css( "borderRadius", parseInt(value) );
+				$( '#box' ).css( "borderRadius", value );
 				return value;
 			},
 			convertBack: function( value, source, target ) {
-				$( '#box' ).css( "borderRadius", parseInt(value) );
+				$( '#box' ).css( "borderRadius", value );
 				return value;
 			}
 		}
@@ -36,7 +36,7 @@ jQuery( function( $ ){
 	});
 
 	$( '#boxShadowBlur' ).change( function() {
-		$( '#box' ).css( "boxShadowBlur",  parseInt($(this).val()) );
+		$( '#box' ).css( "boxShadowBlur",  $(this).val() );
 	});
 
 	$( '#boxShadowSpread' ).change( function() {
