@@ -30,21 +30,60 @@ jQuery( function( $ ){
 		}
 	});
 
+	$( '#boxShadowColor' ).link( box_css, {
+		boxShadowColor: {
+			convert: function( value, source, target ) {
+				$( '#box' ).css( "boxShadowColor", value );
+				return value;
+			},
+			convertBack: function( value, source, target ) {
+				$( '#box' ).css( "boxShadowColor", value );
+				return value;
+			}
+		}
+	});
+
+    $( '#boxShadowBlur' ).link( box_css, {
+		 boxShadowBlur: {
+			convert: function( value, source, target ) {
+				$( '#box' ).css( "boxShadowBlur", value );
+				return value;
+			},
+			convertBack: function( value, source, target ) {
+				$( '#box' ).css( "boxShadowBlur", value );
+				return value;
+			}
+		}
+	});
+
+    $( '#boxShadowSpread' ).link( box_css, {
+		boxShadowSpread: {
+			convert: function( value, source, target ) {
+				$( '#box' ).css( "boxShadowSpread", value );
+				return value;
+			},
+			convertBack: function( value, source, target ) {
+				$( '#box' ).css( "boxShadowSpread", value );
+				return value;
+			}
+		}
+	});
+
+    $( '#boxShadow' ).link( box_css, {
+		boxShadow: {
+			convert: function( value, source, target ) {
+				$( '#box' ).css( "boxShadow", value );
+				return value;
+			},
+			convertBack: function( value, source, target ) {
+				$( '#box' ).css( "boxShadow", value );
+				return value;
+			}
+		}
+	});
+
 	// or just update the css straight up with the form
-	$( '#boxShadowColor' ).change( function() {
+	/* $( '#boxShadowColor' ).change( function() {
 		$( '#box' ).css( "boxShadowColor",  $(this).val() );
-	});
-
-	$( '#boxShadowBlur' ).change( function() {
-		$( '#box' ).css( "boxShadowBlur",  $(this).val() );
-	});
-
-	$( '#boxShadowSpread' ).change( function() {
-		$( '#box' ).css( "boxShadowSpread",  $(this).val() );
-	});
-
-	$( '#boxShadow' ).change( function() {
-		$( '#box' ).css( "boxShadow",  $(this).val() );
-	});
-
+	}); */
 });
