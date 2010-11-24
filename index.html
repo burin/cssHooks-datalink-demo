@@ -1,0 +1,55 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>cssHooks &amp; datalink Demo</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<style>
+	#box {
+		margin: 20px 0;
+		width: 300px;
+		height: 300px;
+		-moz-box-shadow: 0 1px 3px #888;
+		-webkit-box-shadow: 0 1px 3px #888;
+		box-shadow: 0 1px 3px #888;
+		
+		background: #F6F6F6; /* old browsers */
+		background: -moz-linear-gradient(top, #F6F6F6 0%, #EBEBEB 100%); /* firefox */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F6F6F6), color-stop(100%,#EBEBEB)); /* webkit */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F6F6F6', endColorstr='#EBEBEB',GradientType=0 ); /* ie */
+		
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		
+		-webkit-transition: all .5s ease-in;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="js/borderradius.js"></script>
+	<script src="js/boxshadow.js"></script>
+	<script src="js/jquery.datalink.js"></script>
+	<script src="js/demo.js"></script>
+</head>
+<body>
+<div id="page">
+	<div id="header">
+		<h1><a href="/"><span>omg</span> cssHooks</a></h1>
+	</div>
+	<div id="main">
+		<div id="box"><p>wait, is this really a box?</p></div>
+		<div id="form">
+			<p><label for="borderRadius">Border Radius: </label><input name="borderRadius" id="borderRadius"></p>
+			<p><label for="boxShadowBlur">Box Shadow Blur: </label><input name="boxShadowBlur" id="boxShadowBlur"></p>
+			<p><label for="boxShadowColor">Box Shadow Color: </label><input name="boxShadowColor" id="boxShadowColor"></p>
+			<p><label for="boxShadowSpread">Box Shadow Spread: </label><input name="boxShadowSpread" id="boxShadowSpread"></p>
+			<p><label for="boxShadow">Box Shadow (shorthand): </label><input name="boxShadow" id="boxShadow"></p>
+		</div>
+	</div>
+	<div id="footer">
+	</div>
+</div>
+</body>
+</html>
